@@ -9,9 +9,9 @@ import java.util.concurrent.TimeUnit;
 
 public class Driver {
 
-    private static WebDriver driver;
-
     private Driver(){ }
+
+    private static WebDriver driver;
 
     public static WebDriver getDriver() {
 
@@ -34,13 +34,9 @@ public class Driver {
                     driver.manage().window().maximize();
                     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     break;
-
             }
-
-            return driver;
         }
 
-        System.out.println("Driver already exists");
         return driver;
     }
 
