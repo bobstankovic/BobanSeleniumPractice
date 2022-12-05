@@ -21,14 +21,12 @@ public class Driver {
 
             switch (browserType){
                 case "chrome":
-                    System.out.println("Creating new Chrome Driver");
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
                     driver.manage().window().maximize();
                     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     break;
                 case "firefox":
-                    System.out.println("Creating new Firefox Driver");
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
                     driver.manage().window().maximize();
@@ -36,7 +34,6 @@ public class Driver {
                     break;
             }
         }
-
         return driver;
     }
 
